@@ -1,0 +1,369 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --reveal-height: min(58vh, 520px);
+  --transition-height: 85vh;
+}
+
+body {
+  margin: 0;
+  background: #000;
+  color: #000;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+}
+
+.page {
+  position: relative;
+  width: min(100%, 390px);
+  margin: 0 auto;
+}
+
+/* Layer 1 — fixed black bar at bottom (background) */
+.bg-black-bar {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(100%, 390px);
+  height: var(--reveal-height);
+  background: #000;
+  z-index: 1;
+}
+
+/* Three stacked scroll layers */
+.scroll-sync {
+  display: grid;
+  grid-template-areas: "stack";
+  position: relative;
+}
+
+.layer-bg,
+.layer-reveal,
+.layer-fg {
+  grid-area: stack;
+}
+
+/* Layer 1 — scrolling red + gradient backgrounds */
+.layer-bg {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  pointer-events: none;
+}
+
+.bg-red {
+  flex: 1 1 auto;
+  min-height: calc(92vh - var(--reveal-height));
+  background: #ff0000;
+}
+
+.bg-gradient {
+  flex: 0 0 var(--transition-height);
+  background: linear-gradient(
+    180deg,
+    #ff0000 0%,
+    #d40000 12%,
+    #a80000 28%,
+    #7a0000 48%,
+    #4a0000 68%,
+    #220000 85%,
+    #000000 100%
+  );
+}
+
+.bg-spacer {
+  flex: 0 0 var(--reveal-height);
+}
+
+/* Layer 2 — Landing 3 content, always present, sticky at bottom */
+.layer-reveal {
+  z-index: 2;
+  align-self: end;
+  width: 100%;
+  height: var(--reveal-height);
+  padding: 40px 24px 32px;
+  color: #ff0000;
+  position: sticky;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.layer-reveal .activity-content {
+  pointer-events: auto;
+}
+
+.activity-time {
+  position: absolute;
+  top: 128px;
+  left: 18px;
+  margin: 0;
+  font-family: "Intel One Mono", monospace;
+  font-size: 1.05rem;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.activity-content {
+  position: relative;
+  height: 100%;
+  padding-left: 36px;
+  display: flex;
+  flex-direction: column;
+}
+
+.activity-header {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+}
+
+.activity-scene {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: min(54%, 188px);
+}
+
+.speech-bubble {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.cooking-vamp {
+  width: 104px;
+  margin-left: auto;
+}
+
+.bloody-bites-title {
+  margin: 96px 0 0;
+  max-width: 240px;
+  font-family: "Lacquer", cursive;
+  font-size: clamp(3.1rem, 15vw, 4rem);
+  font-weight: 400;
+  line-height: 0.9;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  margin-bottom: 28px;
+  font-family: "Intel One Mono", monospace;
+  font-size: 1rem;
+}
+
+.footer-nav a {
+  color: #ff0000;
+  text-decoration: underline;
+}
+
+.citation {
+  margin: 0;
+  font-family: "Intel One Mono", monospace;
+  font-size: 0.62rem;
+  line-height: 1.5;
+}
+
+.citation a {
+  color: #ff0000;
+  text-decoration: underline;
+}
+
+/* Layer 3 — Landing 1 foreground, scrolls on top (no backgrounds) */
+.layer-fg {
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  pointer-events: none;
+}
+
+.layer-fg a {
+  pointer-events: auto;
+}
+
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: min(100%, 390px);
+  padding: 20px 24px 12px;
+  pointer-events: auto;
+}
+
+.top-bar-spacer {
+  flex: 0 0 56px;
+}
+
+.icon-button {
+  display: block;
+  line-height: 0;
+}
+
+.icon-button img {
+  width: 24px;
+  height: 24px;
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(92vh - var(--reveal-height));
+  padding: 8px 24px 0;
+  text-align: center;
+}
+
+.hero-load-cover {
+  flex: 1 1 auto;
+  min-height: calc(var(--reveal-height) * 0.55);
+  margin-top: 32px;
+  background: #ff0000;
+}
+
+.welcome {
+  margin: 0;
+  font-family: "Lacquer", cursive;
+  font-size: clamp(3rem, 14vw, 4.5rem);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: 0.02em;
+}
+
+.mask {
+  width: min(72%, 260px);
+  margin: 12px auto 20px;
+}
+
+.carnival-title {
+  margin-bottom: 36px;
+}
+
+.carnival-line {
+  margin: 0;
+  font-family: "Lacquer", cursive;
+  font-weight: 400;
+  line-height: 0.95;
+}
+
+.carnival-line--small {
+  font-size: clamp(1.4rem, 6vw, 1.85rem);
+}
+
+.carnival-line:not(.carnival-line--small):not(.carnival-line--large) {
+  font-size: clamp(2rem, 9vw, 2.75rem);
+}
+
+.carnival-line--large {
+  font-size: clamp(2.6rem, 12vw, 3.6rem);
+}
+
+.intro {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  text-align: left;
+}
+
+.intro-vamp {
+  width: 72px;
+  flex-shrink: 0;
+}
+
+.intro-text {
+  margin: 0;
+  font-family: "Delius Swash Caps", cursive;
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.intro-text a {
+  color: #0000ff;
+  text-decoration: underline;
+}
+
+.fg-transition {
+  position: relative;
+  flex: 0 0 var(--transition-height);
+  pointer-events: none;
+}
+
+.falling-vamp {
+  position: absolute;
+  bottom: 10%;
+  right: 12%;
+  width: 92px;
+  z-index: 2;
+}
+
+.youtube-player {
+  position: fixed;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.fg-spacer {
+  flex: 0 0 var(--reveal-height);
+}
+
+.page--placeholder {
+  min-height: 100vh;
+  background: #000;
+  color: #ff0000;
+}
+
+.placeholder-main {
+  padding: 96px 24px 32px;
+  font-family: "Intel One Mono", monospace;
+  text-align: center;
+}
+
+.placeholder-main h1 {
+  margin: 0 0 16px;
+  font-family: "Lacquer", cursive;
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.placeholder-main p {
+  margin: 0 0 24px;
+}
+
+.placeholder-main a {
+  color: #ff0000;
+  text-decoration: underline;
+}
+
+.top-link {
+  font-family: "Intel One Mono", monospace;
+  font-size: 0.875rem;
+  color: #ff0000;
+  text-decoration: underline;
+}

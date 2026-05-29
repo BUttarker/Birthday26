@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carnival of the Dazzling Night</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Intel+One+Mono&family=Inter:wght@400&family=Lacquer&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <header class="top-bar">
+      <a class="icon-button" href="sidebar.html" aria-label="Open sidebar">
+        <img src="assets/icons/homepage-icon.png" alt="">
+      </a>
+      <button class="icon-button" type="button" id="sound-toggle" aria-label="Turn sound off">
+        <img id="sound-icon" src="assets/icons/sound-high-solid.png" alt="">
+      </button>
+    </header>
+
+    <div class="bg-black-bar" aria-hidden="true"></div>
+
+    <div class="scroll-sync">
+      <div class="layer-bg">
+        <div class="bg-red"></div>
+        <div class="bg-gradient"></div>
+        <div class="bg-spacer"></div>
+      </div>
+
+      <section class="layer-reveal" aria-label="Bloody Bites">
+        <p class="activity-time">9:45 - 11:30</p>
+
+        <div class="activity-content">
+          <div class="activity-header">
+            <div class="activity-scene">
+              <img class="speech-bubble" src="assets/illustrations/text-bubble.png" alt="I want to make y'all breakfast. hehe -w-.">
+              <img class="cooking-vamp" src="assets/illustrations/vamp-cooking.png" alt="">
+            </div>
+
+            <h2 class="bloody-bites-title">BLOODY BITES</h2>
+          </div>
+
+          <nav class="footer-nav">
+            <a href="menu.html">Menu</a>
+            <a href="activities.html">Activities</a>
+          </nav>
+
+          <p class="citation">
+            Music: <a href="https://youtu.be/3-OuEDkHiCk?si=4iL0HsNgPWrIKyud" target="_blank" rel="noopener noreferrer">"Intro : The Invitation"</a> by <a href="https://youtu.be/3-OuEDkHiCk?si=4iL0HsNgPWrIKyud" target="_blank" rel="noopener noreferrer">ENHYPEN</a> (BORDER : CARNIVAL), courtesy of <a href="https://youtu.be/3-OuEDkHiCk?si=4iL0HsNgPWrIKyud" target="_blank" rel="noopener noreferrer">HYBE LABELS</a>.
+          </p>
+        </div>
+      </section>
+
+      <div class="layer-fg">
+        <div class="top-bar-spacer" aria-hidden="true"></div>
+
+        <section class="hero">
+          <h1 class="welcome">WELCOME</h1>
+          <img class="mask" src="assets/illustrations/masquerade-mask.png" alt="Masquerade mask">
+
+          <div class="carnival-title">
+            <p class="carnival-line carnival-line--small">TO THE</p>
+            <p class="carnival-line">CARNIVAL OF THE</p>
+            <p class="carnival-line carnival-line--large">DAZZLING NIGHT</p>
+          </div>
+
+          <div class="intro">
+            <img class="intro-vamp" src="assets/illustrations/vamp-landing.png" alt="">
+            <p class="intro-text">
+              This is the landing page for the website. You can go through each activity one by one, or look at the full schedule and other important information on the <a href="homepage.html">homepage</a>. You can access all pages by clicking the sidebar button on the top left!
+            </p>
+          </div>
+
+          <div class="hero-load-cover" aria-hidden="true"></div>
+          <img class="falling-vamp" src="assets/illustrations/vamp-falling.png" alt="">
+        </section>
+
+        <section class="fg-transition" aria-hidden="true"></section>
+
+        <div class="fg-spacer" aria-hidden="true"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="youtube-player" class="youtube-player" aria-hidden="true"></div>
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="script.js"></script>
+</body>
+</html>
