@@ -304,7 +304,7 @@ a {
 }
 
 .intro-text a {
-  color: #0000ff;
+  color: #000;
   text-decoration: underline;
 }
 
@@ -334,7 +334,8 @@ a {
   flex: 0 0 var(--reveal-height);
 }
 
-.page--placeholder {
+.page--placeholder,
+.page--homepage {
   min-height: 100vh;
   background: #000;
   color: #ff0000;
@@ -366,5 +367,169 @@ a {
   font-family: "Intel One Mono", monospace;
   font-size: 0.875rem;
   color: #ff0000;
+  text-decoration: underline;
+}
+
+/* Activities page (Morning Activities) */
+.page--activities {
+  background: #341539;
+  color: #fff;
+  overflow-x: clip;
+}
+
+.page--activities .top-bar {
+  width: min(100%, 390px);
+  padding: 18px 18px 0;
+}
+
+.activities {
+  position: relative;
+  padding: 56px 20px 40px;
+}
+
+.activities-title {
+  margin: 0 0 4px;
+  text-align: center;
+  font-family: "Lacquer", cursive;
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+  color: #ff0000;
+}
+
+.activities-time {
+  margin: 0 0 28px;
+  text-align: center;
+  font-family: "Euphoria Script", cursive;
+  font-weight: 400;
+  font-size: clamp(4rem, 18vw, 5.8rem);
+  line-height: 0.95;
+  background: linear-gradient(180deg, #fff6c0 0%, #ffee88 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.activity-block {
+  font-family: "Delius Swash Caps", cursive;
+  font-size: 1.45rem;
+  line-height: 1.15;
+  color: #fff6c0;
+}
+
+.activity-block p {
+  margin: 0 0 6px;
+}
+
+.activity-block .accent {
+  color: #ffee88;
+}
+
+.activity-block--pancakes {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.activity-block--pancakes .activity-text {
+  padding-top: 12px;
+}
+
+.activity-img--pancakes {
+  width: 130px;
+  flex-shrink: 0;
+}
+
+.activity-divider--flowers {
+  margin: 0 0 20px;
+}
+
+.activity-block--masks {
+  text-align: right;
+  margin-bottom: -32px;
+  position: relative;
+  z-index: 2;
+}
+
+.activity-block--masks .accent {
+  margin-bottom: 0;
+}
+
+.activity-img--masks {
+  margin-top: -56px;
+}
+
+.activity-bleed {
+  display: block;
+  width: 118%;
+  max-width: none;
+  margin-left: -9%;
+}
+
+.activity-block--games {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.activity-block--games .activity-text {
+  padding-top: 8px;
+}
+
+.activity-games-art {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.activity-games-art img:first-child {
+  width: 74px;
+}
+
+.activity-games-art img:last-child {
+  width: 94px;
+}
+
+.activity-divider--ladder {
+  width: 130%;
+  margin-left: -18%;
+  margin-bottom: 32px;
+}
+
+.activities-next {
+  display: block;
+  text-align: center;
+  font-family: "Delius Swash Caps", cursive;
+  font-size: 1.2rem;
+  color: #ffee88;
+  text-decoration: underline;
+}
+
+/* Menu-for-everything page */
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 24px auto 0;
+  width: min(100%, 330px);
+}
+
+.menu-list a {
+  display: block;
+  padding: 14px 16px;
+  border: 2px solid #ff0000;
+  border-radius: 12px;
+  font-family: "Intel One Mono", monospace;
+  color: #ff0000;
+  text-decoration: none;
+}
+
+.menu-list a:hover {
   text-decoration: underline;
 }

@@ -3,21 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Activities — Carnival of the Dazzling Night</title>
+  <title>Morning Activities — Carnival of the Dazzling Night</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Euphoria+Script&family=Lacquer&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="page page--placeholder">
+  <div class="page page--activities">
     <header class="top-bar">
-      <a class="icon-button" href="sidebar.html" aria-label="Open sidebar">
+      <a class="icon-button" href="menu.html" aria-label="Open menu">
         <img src="assets/icons/homepage-icon.png" alt="">
       </a>
-      <a class="top-link" href="homepage.html">Home</a>
     </header>
-    <main class="placeholder-main">
-      <h1>Activities</h1>
-      <p>Coming soon.</p>
-      <a href="homepage.html">Back to homepage</a>
+
+    <main class="activities" aria-label="Morning Activities">
+      <h1 class="activities-title">BLOODY BITES</h1>
+      <p class="activities-time">9:45–11:30</p>
+
+      <section class="activity-block activity-block--pancakes">
+        <div class="activity-text">
+          <p>Come for</p>
+          <p class="accent">PANCAKES!</p>
+        </div>
+        <img class="activity-img activity-img--pancakes" src="assets/activities/pancakes.png" alt="">
+      </section>
+
+      <img class="activity-divider activity-divider--flowers activity-bleed" src="assets/activities/flowers.png" alt="">
+
+      <section class="activity-block activity-block--masks">
+        <p>make</p>
+        <p class="accent">MASQUERADE MASKS</p>
+        <img class="activity-img activity-img--masks activity-bleed" src="assets/activities/masquerade-masks.png" alt="">
+      </section>
+
+      <section class="activity-block activity-block--games">
+        <div class="activity-text">
+          <p>and</p>
+          <p class="accent">PLAY GAMES!</p>
+        </div>
+        <div class="activity-games-art">
+          <img src="assets/activities/dice.png" alt="">
+          <img src="assets/activities/chess-pieces.png" alt="">
+        </div>
+      </section>
+
+      <img class="activity-divider activity-divider--ladder activity-bleed" src="assets/activities/game-ladder.png" alt="">
+
+      <a class="activities-next" href="movie.html">Next Activity (Movie)</a>
     </main>
   </div>
 </body>
