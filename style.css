@@ -511,6 +511,20 @@ a {
   text-decoration: underline;
 }
 
+.activities-citation {
+  margin: 28px 0 0;
+  font-family: "Intel One Mono", monospace;
+  font-size: 0.62rem;
+  line-height: 1.5;
+  text-align: center;
+  color: #fff6c0;
+}
+
+.activities-citation a {
+  color: #fff6c0;
+  text-decoration: underline;
+}
+
 /* Menu-for-everything page */
 .menu-list {
   display: flex;

@@ -1,6 +1,10 @@
-const VIDEO_ID = '3-OuEDkHiCk';
-const SOUND_ON_SRC = 'assets/icons/sound-high-solid.png';
-const SOUND_OFF_SRC = 'assets/icons/sound-off-solid.png';
+const DEFAULT_VIDEO_ID = '3-OuEDkHiCk';
+const DEFAULT_SOUND_ON_SRC = 'assets/icons/sound-high-solid.png';
+const DEFAULT_SOUND_OFF_SRC = 'assets/icons/sound-off-solid.png';
+
+const VIDEO_ID = document.body.dataset.videoId || DEFAULT_VIDEO_ID;
+const SOUND_ON_SRC = document.body.dataset.soundOn || DEFAULT_SOUND_ON_SRC;
+const SOUND_OFF_SRC = document.body.dataset.soundOff || DEFAULT_SOUND_OFF_SRC;
 
 let player;
 let soundOn = true;
@@ -31,6 +35,10 @@ function tryStartMusic() {
 }
 
 function onYouTubeIframeAPIReady() {
+  if (!document.getElementById('youtube-player')) {
+    return;
+  }
+
   player = new YT.Player('youtube-player', {
     height: '0',
     width: '0',

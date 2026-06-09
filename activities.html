@@ -6,15 +6,22 @@
   <title>Morning Activities — Carnival of the Dazzling Night</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Euphoria+Script&family=Lacquer&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Euphoria+Script&family=Intel+One+Mono&family=Lacquer&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body
+  data-video-id="95H5QK9MFS4"
+  data-sound-on="assets/icons/sound-high-solid-white.png"
+  data-sound-off="assets/icons/sound-off-solid-white.png"
+>
   <div class="page page--activities">
     <header class="top-bar">
       <a class="icon-button" href="menu.html" aria-label="Open menu">
-        <img src="assets/icons/homepage-icon.png" alt="">
+        <img src="assets/icons/menu-icon-white.png" alt="">
       </a>
+      <button class="icon-button" type="button" id="sound-toggle" aria-label="Turn sound off">
+        <img id="sound-icon" src="assets/icons/sound-high-solid-white.png" alt="">
+      </button>
     </header>
 
     <main class="activities" aria-label="Morning Activities">
@@ -51,7 +58,16 @@
       <img class="activity-divider activity-divider--ladder activity-bleed" src="assets/activities/game-ladder.png" alt="">
 
       <a class="activities-next" href="movie.html">Next Activity (Movie)</a>
+
+      <p class="activities-citation">
+        Music: <a href="https://youtu.be/95H5QK9MFS4?si=AQUwmsMPoF8NPh2Z" target="_blank" rel="noopener noreferrer">"Journey"</a> by <a href="https://youtu.be/95H5QK9MFS4?si=AQUwmsMPoF8NPh2Z" target="_blank" rel="noopener noreferrer">Olexandr Ignatov</a>, courtesy of <a href="https://youtu.be/95H5QK9MFS4?si=AQUwmsMPoF8NPh2Z" target="_blank" rel="noopener noreferrer">Olexandr Ignatov</a>.
+      </p>
     </main>
   </div>
+
+  <div id="youtube-player" class="youtube-player" aria-hidden="true"></div>
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="script.js"></script>
 </body>
 </html>
