@@ -3,25 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Next Activity (Movie) — Carnival of the Dazzling Night</title>
+  <title>Movie — Carnival of the Dazzling Night</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Intel+One+Mono&family=Lacquer&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Euphoria+Script&family=Intel+One+Mono&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div class="page page--placeholder">
+<body
+  data-video-id="FGXhNpnQRHI"
+  data-sound-on="assets/icons/sound-high-solid-white.png"
+  data-sound-off="assets/icons/sound-off-solid-white.png"
+>
+  <div class="page page--movie">
     <header class="top-bar">
       <a class="icon-button" href="menu.html" aria-label="Open menu">
-        <img src="assets/icons/homepage-icon.png" alt="">
+        <img src="assets/icons/menu-icon-white.png" alt="">
       </a>
-      <a class="top-link" href="homepage.html">Home</a>
+      <button class="icon-button" type="button" id="sound-toggle" aria-label="Turn sound off">
+        <img id="sound-icon" src="assets/icons/sound-high-solid-white.png" alt="">
+      </button>
     </header>
-    <main class="placeholder-main">
-      <h1>Next Activity (Movie)</h1>
-      <p>Coming soon.</p>
-      <a href="activities.html">Back to Morning Activities</a>
+
+    <main class="movie" aria-label="Movie activity">
+      <h1 class="movie-title">Movie</h1>
+
+      <figure class="movie-poster-wrap">
+        <img class="movie-poster" src="assets/movie/movie-poster.jpeg" alt="Sherlock Holmes 2009 movie poster">
+        <figcaption class="movie-poster-citation">
+          Image via <a href="http://pinterest.com/pin/674203006737392483/" target="_blank" rel="noopener noreferrer">Down the Rabbit Hole</a> on Pinterest.
+        </figcaption>
+      </figure>
+
+      <section class="movie-experience">
+        <img class="movie-vamp" src="assets/movie/movie-vamp.png" alt="">
+        <p class="movie-description">Join us for an immersive viewing experience of a movie by watching it in 3D, and enjoying foods from the movie!</p>
+      </section>
+
+      <img class="movie-ticket" src="assets/movie/movie-ticket.png" alt="">
+
+      <p class="movie-disclaimer">Disclaimer: Movie may change.</p>
+
+      <a class="movie-next" href="escape-room.html">Next Activity (Escape Room +)</a>
+
+      <p class="movie-citation">
+        Music: <a href="https://youtu.be/FGXhNpnQRHI?si=nw5SchJtTWbXQnya" target="_blank" rel="noopener noreferrer">"GIVEN-TAKEN" Orchestral Cover</a> by <a href="https://youtu.be/FGXhNpnQRHI?si=nw5SchJtTWbXQnya" target="_blank" rel="noopener noreferrer">jemusic</a> (Original song by <a href="https://youtu.be/FGXhNpnQRHI?si=nw5SchJtTWbXQnya" target="_blank" rel="noopener noreferrer">ENHYPEN</a>).
+      </p>
     </main>
   </div>
+
+  <div id="youtube-player" class="youtube-player" aria-hidden="true"></div>
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="script.js"></script>
 </body>
 </html>
