@@ -334,11 +334,64 @@ a {
   flex: 0 0 var(--reveal-height);
 }
 
-.page--placeholder,
-.page--homepage {
+.page--placeholder {
   min-height: 100vh;
   background: #000;
   color: #ff0000;
+}
+
+.page--homepage {
+  position: relative;
+  min-height: 100vh;
+  color: #000;
+  overflow-x: clip;
+}
+
+.homepage-bg {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+  width: min(100%, 390px);
+  height: 100%;
+  pointer-events: none;
+}
+
+.homepage-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.homepage-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.page--homepage .top-bar {
+  position: fixed;
+  z-index: 10;
+  width: min(100%, 390px);
+  padding: 18px 18px 0;
+}
+
+.homepage {
+  position: relative;
+  z-index: 1;
+  padding: 56px 24px 40px;
+}
+
+.homepage-title {
+  margin: 0;
+  text-align: center;
+  font-family: "Euphoria Script", cursive;
+  font-weight: 400;
+  font-size: 87px;
+  line-height: 0.9;
+  color: #000;
 }
 
 .placeholder-main {
@@ -696,25 +749,124 @@ a {
   text-decoration: underline;
 }
 
-/* Menu-for-everything page */
-.menu-list {
+/* Menu page */
+.page--menu {
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  margin: 24px auto 0;
-  width: min(100%, 330px);
+  min-height: 100vh;
+  background: #000;
+  color: #fff;
 }
 
-.menu-list a {
-  display: block;
-  padding: 14px 16px;
-  border: 2px solid #ff0000;
-  border-radius: 12px;
-  font-family: "Intel One Mono", monospace;
+.page--menu .top-bar {
+  width: min(100%, 390px);
+  padding: 18px 18px 0;
+}
+
+.menu-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 96px 0 0;
+  min-height: 0;
+  text-align: center;
+}
+
+.menu-title {
+  margin: 0 0 12px;
+  padding: 0 24px;
+  font-family: "Lacquer", cursive;
+  font-weight: 400;
+  font-size: 2.5rem;
   color: #ff0000;
-  text-decoration: none;
 }
 
-.menu-list a:hover {
+.menu-subtitle {
+  margin: 0;
+  padding: 0 24px;
+  font-family: "Intel One Mono", monospace;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #fff;
+}
+
+.menu-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 24px 0 0;
+}
+
+.menu-item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  border: none;
+  border-radius: 0;
+  font-family: "Intel One Mono", monospace;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #fff;
+  text-decoration: none;
+  text-align: left;
+  background: #000;
+  overflow: hidden;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.menu-item.is-current,
+.menu-item.is-pressed,
+.menu-item:hover,
+.menu-item:focus-visible,
+.menu-item:active {
   text-decoration: underline;
+}
+
+.menu-item--homepage.is-current,
+.menu-item--homepage.is-pressed,
+.menu-item--homepage:hover,
+.menu-item--homepage:focus-visible,
+.menu-item--homepage:active {
+  color: #ff0000;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
+    url("assets/homepage/image-3.png") center / cover no-repeat;
+}
+
+.menu-item--landing.is-current,
+.menu-item--landing.is-pressed,
+.menu-item--landing:hover,
+.menu-item--landing:focus-visible,
+.menu-item--landing:active {
+  color: #000;
+  background: #ff0000;
+}
+
+.menu-item--activities.is-current,
+.menu-item--activities.is-pressed,
+.menu-item--activities:hover,
+.menu-item--activities:focus-visible,
+.menu-item--activities:active {
+  color: #fff6c0;
+  background: #341539;
+}
+
+.menu-item--movie.is-current,
+.menu-item--movie.is-pressed,
+.menu-item--movie:hover,
+.menu-item--movie:focus-visible,
+.menu-item--movie:active {
+  color: #cecbc4;
+  background: #341f22;
+}
+
+.menu-item--escape-room.is-current,
+.menu-item--escape-room.is-pressed,
+.menu-item--escape-room:hover,
+.menu-item--escape-room:focus-visible,
+.menu-item--escape-room:active {
+  color: #fff;
+  background: #0c2340;
 }

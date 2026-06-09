@@ -10,25 +10,36 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="page page--placeholder">
+  <div class="page page--menu">
     <header class="top-bar">
       <a class="icon-button" href="menu.html" aria-label="Open menu">
         <img src="assets/icons/homepage-icon.png" alt="">
       </a>
-      <a class="top-link" href="homepage.html">Home</a>
     </header>
-    <main class="placeholder-main">
-      <h1>Menu</h1>
-      <p>Everything in one place.</p>
+
+    <main class="menu-main">
+      <h1 class="menu-title">Menu</h1>
+      <p class="menu-subtitle">Everything you need in one place.</p>
 
       <nav class="menu-list" aria-label="Site navigation">
-        <a href="index.html">Landing page</a>
-        <a href="homepage.html">Homepage</a>
-        <a href="activities.html">Morning Activities</a>
-        <a href="movie.html">Movie</a>
-        <a href="escape-room.html">Escape Room +</a>
+        <a class="menu-item menu-item--homepage" href="homepage.html">Homepage</a>
+        <a class="menu-item menu-item--landing" href="index.html">Landing page</a>
+        <a class="menu-item menu-item--activities" href="activities.html">9:45-11:30</a>
+        <a class="menu-item menu-item--movie" href="movie.html">Movie</a>
+        <a class="menu-item menu-item--escape-room" href="escape-room.html">1:43-5:53</a>
       </nav>
     </main>
   </div>
+
+  <script>
+    document.querySelectorAll('.menu-item').forEach((item) => {
+      item.addEventListener('touchstart', () => {
+        document.querySelectorAll('.menu-item').forEach((link) => {
+          link.classList.remove('is-pressed');
+        });
+        item.classList.add('is-pressed');
+      }, { passive: true });
+    });
+  </script>
 </body>
 </html>
