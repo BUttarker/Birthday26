@@ -639,6 +639,63 @@ a {
   text-decoration: underline;
 }
 
+/* Escape Room + page */
+.page--escape-room {
+  background: #0c2340;
+  color: #fff;
+  overflow-x: clip;
+}
+
+.page--escape-room .top-bar {
+  width: min(100%, 390px);
+  padding: 18px 18px 0;
+}
+
+.escape-room {
+  position: relative;
+  padding: 56px 0 40px;
+}
+
+.escape-room-time {
+  margin: 0 0 8px;
+  text-align: center;
+  font-family: "Euphoria Script", cursive;
+  font-weight: 400;
+  font-size: 87px;
+  line-height: 0.9;
+  color: #fff;
+}
+
+.escape-room-board {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 0 28px;
+}
+
+.escape-room-home {
+  display: block;
+  text-align: center;
+  font-family: "Intel One Mono", monospace;
+  font-size: 24px;
+  color: #fff;
+  text-decoration: underline;
+}
+
+.escape-room-citation {
+  margin: 24px 20px 0;
+  font-family: "Intel One Mono", monospace;
+  font-size: 11px;
+  line-height: 1.5;
+  text-align: center;
+  color: #fff;
+}
+
+.escape-room-citation a {
+  color: #fff;
+  text-decoration: underline;
+}
+
 /* Menu-for-everything page */
 .menu-list {
   display: flex;

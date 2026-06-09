@@ -3,25 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Next Activity (Escape Room +) — Carnival of the Dazzling Night</title>
+  <title>Escape Room + — Carnival of the Dazzling Night</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Intel+One+Mono&family=Lacquer&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Euphoria+Script&family=Intel+One+Mono&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div class="page page--placeholder">
+<body
+  data-video-id="https://www.youtube.com/watch?v=ZT5GICLYQOk"
+  data-sound-on="assets/icons/sound-high-solid-white.png"
+  data-sound-off="assets/icons/sound-off-solid-white.png"
+>
+  <div class="page page--escape-room">
     <header class="top-bar">
       <a class="icon-button" href="menu.html" aria-label="Open menu">
-        <img src="assets/icons/homepage-icon.png" alt="">
+        <img src="assets/icons/menu-icon-white.png" alt="">
       </a>
-      <a class="top-link" href="homepage.html">Home</a>
+      <button class="icon-button" type="button" id="sound-toggle" aria-label="Turn sound off">
+        <img id="sound-icon" src="assets/icons/sound-high-solid-white.png" alt="">
+      </button>
     </header>
-    <main class="placeholder-main">
-      <h1>Next Activity (Escape Room +)</h1>
-      <p>Coming soon.</p>
-      <a href="movie.html">Back to Movie</a>
+
+    <main class="escape-room" aria-label="Escape Room and more">
+      <h1 class="escape-room-time">1:43-5:53</h1>
+
+      <img class="escape-room-board" src="assets/escape-room/escape-room-board.png" alt="Escape room, cake cutting, top secret, and prizes and more">
+
+      <a class="escape-room-home" href="homepage.html">Homepage</a>
+
+      <p class="escape-room-citation">
+        Music: <a href="https://www.youtube.com/watch?v=ZT5GICLYQOk" target="_blank" rel="noopener noreferrer">ENHYPEN - "Tamed-Dashed" (Instrumental + Backing Vocal)</a> by ryzu_one.
+      </p>
     </main>
   </div>
+
+  <div id="youtube-player" class="youtube-player" aria-hidden="true"></div>
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="script.js"></script>
 </body>
 </html>
