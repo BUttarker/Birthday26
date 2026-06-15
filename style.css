@@ -394,6 +394,45 @@ a {
   color: #000;
 }
 
+.homepage-countdown {
+  margin: 16px 0 0;
+  text-align: center;
+  font-family: "Intel One Mono", monospace;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #000;
+}
+
+.homepage-section {
+  margin-top: 32px;
+  text-align: left;
+}
+
+.homepage-subheading {
+  margin: 0 0 12px;
+  font-family: "Intel One Mono", monospace;
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: #000;
+}
+
+.homepage-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.homepage-links li + li {
+  margin-top: 8px;
+}
+
+.homepage-links a {
+  font-family: "Intel One Mono", monospace;
+  font-size: 1rem;
+  color: #000;
+  text-decoration: underline;
+}
+
 .placeholder-main {
   padding: 96px 24px 32px;
   font-family: "Intel One Mono", monospace;

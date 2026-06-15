@@ -6,7 +6,7 @@
   <title>Homepage — Carnival of the Dazzling Night</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Euphoria+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Euphoria+Script&family=Intel+One+Mono&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -24,7 +24,47 @@
 
     <main class="homepage">
       <h1 class="homepage-title">Homepage</h1>
+      <p class="homepage-countdown" id="homepage-countdown" aria-live="polite"></p>
+
+      <section class="homepage-section homepage-forms">
+        <h2 class="homepage-subheading">Forms:</h2>
+        <ul class="homepage-links">
+          <li>
+            <a href="https://forms.gle/dy2te71k4WcDRYb59" target="_blank" rel="noopener noreferrer">RSVP Form</a>
+          </li>
+          <li>
+            <a href="https://forms.gle/fuiTts51XmcFRTJw7" target="_blank" rel="noopener noreferrer">Anonymous questions/concerns/reccomendations</a>
+          </li>
+          <li>
+            <a href="https://forms.gle/AHojYctiyyAPLPPr8" target="_blank" rel="noopener noreferrer">Anonymous Music Recommendation</a>
+          </li>
+        </ul>
+      </section>
     </main>
   </div>
+
+  <script>
+    const countdownTarget = new Date('2026-06-20T08:24:00');
+    const countdownEl = document.getElementById('homepage-countdown');
+
+    function updateCountdown() {
+      const remaining = countdownTarget - Date.now();
+
+      if (remaining <= 0) {
+        countdownEl.textContent = "It's time!";
+        return;
+      }
+
+      const days = Math.floor(remaining / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((remaining / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((remaining / (1000 * 60)) % 60);
+      const seconds = Math.floor((remaining / 1000) % 60);
+
+      countdownEl.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
 </body>
 </html>
