@@ -9,7 +9,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Euphoria+Script&family=Intel+One+Mono&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body
+  data-video-id="Fc7-Oe0tj5k"
+>
   <div class="page page--homepage">
     <div class="homepage-bg" aria-hidden="true">
       <img class="homepage-bg-image" src="assets/homepage/image-3.png" alt="">
@@ -20,31 +22,152 @@
       <a class="icon-button" href="menu.html" aria-label="Open menu">
         <img src="assets/icons/homepage-icon.png" alt="">
       </a>
+      <button class="icon-button" type="button" id="sound-toggle" aria-label="Turn sound off">
+        <img id="sound-icon" src="assets/icons/sound-high-solid.png" alt="">
+      </button>
     </header>
 
     <main class="homepage">
       <h1 class="homepage-title">Homepage</h1>
+
+      <p class="homepage-countdown-label">Time until party</p>
       <p class="homepage-countdown" id="homepage-countdown" aria-live="polite"></p>
 
-      <section class="homepage-section homepage-forms">
+      <p class="homepage-intro">
+        Welcome to the homepage for the website! You can find a schedule and other important information here!
+        Check this homepage regularly for more information!
+      </p>
+
+      <nav class="homepage-toc" aria-label="Table of contents">
+        <h2 class="homepage-subheading">Table of contents:</h2>
+        <ul class="homepage-links">
+          <li><a href="#forms">Forms</a></li>
+          <li><a href="#schedule">Schedule</a></li>
+          <li><a href="#dark-moon-society">Dark Moon Society</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <section class="homepage-section" id="forms">
         <h2 class="homepage-subheading">Forms:</h2>
         <ul class="homepage-links">
-          <li>
+          <li class="homepage-form-item">
             <a href="https://forms.gle/dy2te71k4WcDRYb59" target="_blank" rel="noopener noreferrer">RSVP Form</a>
+            <p class="homepage-note">If you fill out this form by the 18th, you get 10 tickets. If you fill out this form before the 24th at 11:00 PM, you get 5 tickets.</p>
           </li>
-          <li>
-            <a href="https://forms.gle/fuiTts51XmcFRTJw7" target="_blank" rel="noopener noreferrer">Anonymous questions/concerns/reccomendations</a>
+          <li class="homepage-form-card homepage-form-card--questions">
+            <span class="homepage-form-label">Anonymous form</span>
+            <a href="https://forms.gle/fuiTts51XmcFRTJw7" target="_blank" rel="noopener noreferrer">Questions/concerns/recommendations</a>
           </li>
-          <li>
-            <a href="https://forms.gle/AHojYctiyyAPLPPr8" target="_blank" rel="noopener noreferrer">Anonymous Music Recommendation</a>
+          <li class="homepage-form-card homepage-form-card--music">
+            <span class="homepage-form-label">Anonymous form</span>
+            <a href="https://forms.gle/AHojYctiyyAPLPPr8" target="_blank" rel="noopener noreferrer">Music recommendation</a>
           </li>
         </ul>
       </section>
+
+      <section class="homepage-section" id="schedule">
+        <h2 class="homepage-subheading">Schedule:</h2>
+
+        <div class="homepage-schedule-wrap">
+          <table class="homepage-schedule">
+            <thead>
+              <tr>
+                <th scope="col">Time</th>
+                <th scope="col">Activity</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>9:45 - 11:30</td>
+                <td>Come for breakfast and carnival activities</td>
+              </tr>
+              <tr>
+                <td>11:30 - 1:43</td>
+                <td>Movie</td>
+              </tr>
+              <tr class="homepage-schedule-summary">
+                <td>1:43 - 5:53</td>
+                <td>Escape room and other activities!</td>
+              </tr>
+              <tr class="homepage-schedule-sub">
+                <td>1:43 - 3:30~</td>
+                <td>Escape room</td>
+              </tr>
+              <tr class="homepage-schedule-sub">
+                <td>3:30 - 4:00</td>
+                <td>Cake cutting</td>
+              </tr>
+              <tr class="homepage-schedule-sub">
+                <td>4:00 - 5:00</td>
+                <td>Secret activities</td>
+              </tr>
+              <tr class="homepage-schedule-sub">
+                <td>5:00 - 5:30</td>
+                <td>Last chance to get tickets</td>
+              </tr>
+              <tr class="homepage-schedule-sub">
+                <td>5:30 - 5:53</td>
+                <td>Count tickets and give prizes</td>
+              </tr>
+              <tr>
+                <td>5:53 - 6:00</td>
+                <td>Leave/blanket forts</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p class="homepage-note homepage-schedule-note">
+            We will start crashing out at 10:00 PM ☺. Please leave before 10- &lt;3
+          </p>
+          <p class="homepage-note homepage-schedule-note">
+            <strong>Times for deciphering for tickets: 8:24 - 9:45 - 11:30 - 1:43 - 5:53</strong>
+          </p>
+          <p class="homepage-note homepage-schedule-note">
+            If you figure out what these times are references to, I will give you tickets! You can tell us on the day of the party.
+          </p>
+          <p class="homepage-note homepage-schedule-note">
+            You get 5 tickets if you guess 2 correct, and 20 tickets if you get all of them correct! (Hint: a lot of them are related to K-pop, but not all of them are!)
+          </p>
+        </div>
+      </section>
+
+      <section class="homepage-section" id="dark-moon-society">
+        <h2 class="homepage-subheading">Dark Moon Society:</h2>
+        <p class="homepage-text">
+          Big shout-out to the Dark Moon Society for helping host this year’s party!
+          Scarlet, Cheryl, and Emma made this party possible. Thank you for your work making this party magical!
+        </p>
+      </section>
+
+      <section class="homepage-section" id="faq">
+        <h2 class="homepage-subheading">FAQ:</h2>
+        <p class="homepage-text">
+          I will add and answer questions as they come in! You can ask questions through DM, the RSVP form, or the anonymous form!
+        </p>
+
+        <div class="homepage-faq-list">
+          <details class="homepage-faq-item">
+            <summary class="homepage-faq-question">What are tickets and what are they used for?</summary>
+            <div class="homepage-faq-answer">
+              <p>Since this party is kind of based on a carnival, you get tickets for doing different activities. You can buy prizes, and the people who get the most tickets get special prizes!</p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <p class="homepage-citation">
+        Music: <a href="https://youtu.be/Fc7-Oe0tj5k?si=B7nWaVWPCe484X8F" target="_blank" rel="noopener noreferrer">"Drunk-Dazed" Official MV</a> by <a href="https://youtu.be/Fc7-Oe0tj5k?si=B7nWaVWPCe484X8F" target="_blank" rel="noopener noreferrer">ENHYPEN</a> / <a href="https://youtu.be/Fc7-Oe0tj5k?si=B7nWaVWPCe484X8F" target="_blank" rel="noopener noreferrer">HYBE LABELS</a>.
+      </p>
     </main>
   </div>
 
+  <div id="youtube-player" class="youtube-player" aria-hidden="true"></div>
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="script.js"></script>
   <script>
-    const countdownTarget = new Date('2026-06-20T08:24:00');
+    const countdownTarget = new Date('2026-07-25T08:24:00');
     const countdownEl = document.getElementById('homepage-countdown');
 
     function updateCountdown() {
