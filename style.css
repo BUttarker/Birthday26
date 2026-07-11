@@ -557,6 +557,11 @@ a {
   color: rgba(0, 0, 0, 0.85);
 }
 
+.homepage-schedule-link {
+  color: inherit;
+  text-decoration: underline;
+}
+
 .homepage-schedule-note {
   margin-top: 14px;
 }
