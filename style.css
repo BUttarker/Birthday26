@@ -308,6 +308,10 @@ a {
   text-decoration: underline;
 }
 
+.intro-homepage-link {
+  font-weight: 700;
+}
+
 .fg-transition {
   position: relative;
   flex: 0 0 var(--transition-height);
