@@ -486,8 +486,23 @@ body.party-popup-open {
   text-align: left;
 }
 
+.party-popup__x {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #000;
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
 .party-popup__title {
-  margin: 0 0 12px;
+  margin: 0 28px 12px 0;
   font-family: "Intel One Mono", monospace;
   font-size: 1.1rem;
   font-weight: 400;
@@ -517,6 +532,34 @@ body.party-popup-open {
   color: #fff;
   font-family: "Intel One Mono", monospace;
   font-size: 0.9rem;
+  text-align: center;
+  text-decoration: none;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.party-popup__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.party-popup__actions .party-popup__close {
+  margin-top: 0;
+}
+
+.party-popup__secondary {
+  display: block;
+  width: 100%;
+  padding: 10px 14px;
+  border: 2px solid #000;
+  border-radius: 999px;
+  background: transparent;
+  color: #000;
+  font-family: "Intel One Mono", monospace;
+  font-size: 0.9rem;
+  text-align: center;
   cursor: pointer;
 }
 

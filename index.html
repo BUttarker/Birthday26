@@ -85,7 +85,44 @@
 
   <div id="youtube-player" class="youtube-player" aria-hidden="true"></div>
 
+  <div class="party-popup" id="landing-popup" role="dialog" aria-modal="true" aria-labelledby="landing-popup-title" hidden>
+    <div class="party-popup__backdrop" data-popup-close></div>
+    <div class="party-popup__card">
+      <button class="party-popup__x" type="button" data-popup-close aria-label="Close">×</button>
+      <h2 class="party-popup__title" id="landing-popup-title">Welcome to the Carnival of the Dazzling Night!</h2>
+      <p class="party-popup__text">
+        New here? Stay on this page and scroll through the story — music, activities, and a little magic await.
+      </p>
+      <p class="party-popup__text">
+        Looking for the schedule, RSVP, or FAQ? Those live on the <strong>HOMEPAGE</strong>.
+      </p>
+      <div class="party-popup__actions">
+        <button class="party-popup__close" type="button" data-popup-close>Explore the landing page</button>
+        <a class="party-popup__secondary" href="homepage.html">Go to HOMEPAGE</a>
+      </div>
+    </div>
+  </div>
+
   <script src="https://www.youtube.com/iframe_api"></script>
   <script src="script.js"></script>
+  <script>
+    const popup = document.getElementById('landing-popup');
+
+    function closePopup() {
+      popup.hidden = true;
+      document.body.classList.remove('party-popup-open');
+    }
+
+    function openPopup() {
+      popup.hidden = false;
+      document.body.classList.add('party-popup-open');
+    }
+
+    popup.querySelectorAll('[data-popup-close]').forEach((el) => {
+      el.addEventListener('click', closePopup);
+    });
+
+    openPopup();
+  </script>
 </body>
 </html>
