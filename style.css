@@ -414,6 +414,29 @@ a {
   color: #000;
 }
 
+.homepage-party-reminder {
+  margin: 16px auto 0;
+  max-width: 100%;
+  padding: 16px 14px;
+  border: 2px solid #ff0000;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.88);
+  text-align: left;
+  font-family: "Intel One Mono", monospace;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: #000;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.homepage-party-reminder p {
+  margin: 0;
+}
+
+.homepage-party-reminder p + p {
+  margin-top: 10px;
+}
+
 .homepage-intro {
   margin: 28px 0 0;
   text-align: left;
@@ -421,6 +444,76 @@ a {
   font-size: 1rem;
   line-height: 1.5;
   color: #000;
+}
+
+body.party-popup-open {
+  overflow: hidden;
+}
+
+.party-popup[hidden] {
+  display: none;
+}
+
+.party-popup {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.party-popup__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.party-popup__card {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 340px);
+  padding: 22px 20px 18px;
+  border: 2px solid #ff0000;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+  text-align: left;
+}
+
+.party-popup__title {
+  margin: 0 0 12px;
+  font-family: "Intel One Mono", monospace;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #ff0000;
+}
+
+.party-popup__text {
+  margin: 0;
+  font-family: "Intel One Mono", monospace;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #000;
+}
+
+.party-popup__text + .party-popup__text {
+  margin-top: 10px;
+}
+
+.party-popup__close {
+  display: block;
+  width: 100%;
+  margin-top: 18px;
+  padding: 10px 14px;
+  border: 2px solid #ff0000;
+  border-radius: 999px;
+  background: #ff0000;
+  color: #fff;
+  font-family: "Intel One Mono", monospace;
+  font-size: 0.9rem;
+  cursor: pointer;
 }
 
 .homepage-toc {

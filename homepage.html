@@ -33,6 +33,17 @@
       <p class="homepage-countdown-label">Time until party</p>
       <p class="homepage-countdown" id="homepage-countdown" aria-live="polite"></p>
 
+      <div class="homepage-party-reminder" id="homepage-party-reminder">
+        <p>
+          Party starts in <span class="party-days-left">—</span>!
+          Remember to bring a bag for tickets, sunglasses, and a light-colored thin blanket/bedsheet if possible!
+        </p>
+        <p>
+          Remember the dress code recommendation, and to bring your crazy and have fun!
+          See you soon! — Dark Moon Society
+        </p>
+      </div>
+
       <p class="homepage-intro">
         Welcome to the homepage for the website! You can find a schedule and other important information here!
         Check this homepage regularly for more information!
@@ -164,30 +175,87 @@
 
   <div id="youtube-player" class="youtube-player" aria-hidden="true"></div>
 
+  <div class="party-popup" id="party-popup" role="dialog" aria-modal="true" aria-labelledby="party-popup-title" hidden>
+    <div class="party-popup__backdrop" data-popup-close></div>
+    <div class="party-popup__card">
+      <h2 class="party-popup__title" id="party-popup-title">Party reminder</h2>
+      <p class="party-popup__text">
+        Party starts in <span class="party-days-left">—</span>!
+        Remember to bring a bag for tickets, sunglasses, and a light-colored thin blanket/bedsheet if possible!
+      </p>
+      <p class="party-popup__text">
+        Remember the dress code recommendation, and to bring your crazy and have fun!
+        See you soon! — Dark Moon Society
+      </p>
+      <button class="party-popup__close" type="button" data-popup-close>Got it!</button>
+    </div>
+  </div>
+
   <script src="https://www.youtube.com/iframe_api"></script>
   <script src="script.js"></script>
   <script>
     const countdownTarget = new Date('2026-07-25T08:24:00');
+    const partyDate = new Date(2026, 6, 25);
     const countdownEl = document.getElementById('homepage-countdown');
+    const daysLeftEls = document.querySelectorAll('.party-days-left');
+    const popup = document.getElementById('party-popup');
+
+    function calendarDaysUntilParty() {
+      const now = new Date();
+      const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+      const days = Math.round((partyDate - today) / (1000 * 60 * 60 * 24));
+      return Math.max(0, days);
+    }
+
+    function daysLeftLabel(days) {
+      if (days <= 0) {
+        return '0 days';
+      }
+      return days === 1 ? '1 day' : `${days} days`;
+    }
+
+    function updateDaysLeft() {
+      const label = daysLeftLabel(calendarDaysUntilParty());
+      daysLeftEls.forEach((el) => {
+        el.textContent = label;
+      });
+    }
 
     function updateCountdown() {
       const remaining = countdownTarget - Date.now();
 
       if (remaining <= 0) {
         countdownEl.textContent = "It's time!";
+        updateDaysLeft();
         return;
       }
 
-      const days = Math.floor(remaining / (1000 * 60 * 60 * 24));
+      const days = calendarDaysUntilParty();
       const hours = Math.floor((remaining / (1000 * 60 * 60)) % 24);
       const minutes = Math.floor((remaining / (1000 * 60)) % 60);
       const seconds = Math.floor((remaining / 1000) % 60);
 
       countdownEl.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+      updateDaysLeft();
     }
+
+    function closePopup() {
+      popup.hidden = true;
+      document.body.classList.remove('party-popup-open');
+    }
+
+    function openPopup() {
+      popup.hidden = false;
+      document.body.classList.add('party-popup-open');
+    }
+
+    popup.querySelectorAll('[data-popup-close]').forEach((el) => {
+      el.addEventListener('click', closePopup);
+    });
 
     updateCountdown();
     setInterval(updateCountdown, 1000);
+    openPopup();
   </script>
 </body>
 </html>
